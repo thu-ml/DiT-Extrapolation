@@ -54,7 +54,7 @@ This repository hosts RIFLEx and UltraViCo on separate branches, and the code is
               </span>
             </div>
 </div>
-
+<br>
 This branch supports UltraViCo for Wan 2.1. For HunyuanVideo, please refer to the `ultra-hunyuan` branch.
 
 ### Installation
