@@ -22,7 +22,6 @@ This repository hosts RIFLEx and UltraViCo on separate branches, and the code is
 <div align="center">
 
 ## UltraViCo: Breaking Extrapolation Limits in Video Diffusion Transformers
-<a href="https://huggingface.co/papers/2511.20123"><img src="https://img.shields.io/static/v1?label=Daily papers&message=HuggingFace&color=yellow"></a>
 <a href='https://thu-ml.github.io/UltraViCo.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp; 
 <a href='https://arxiv.org/abs/2511.20123'><img src='https://img.shields.io/badge/arXiv-22511.20123-b31b1b.svg'></a> <br>
 <div class="is-size-6 publication-authors">
