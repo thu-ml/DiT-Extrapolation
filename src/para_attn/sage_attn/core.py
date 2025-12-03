@@ -5,10 +5,10 @@ import triton.language as tl
 from .quant_per_block import per_block_int8
 
 from .attn_qk_int8_per_block import forward as attn_false
+
 from .flashattention import forward as fp16_attn
 from typing import Any, List, Literal, Optional, Tuple, Union
-
-
+from .constants import *
 
 
 def sage_attention(
@@ -21,16 +21,21 @@ def sage_attention(
     smooth_k: bool =True,     
     xpos_xi: tl.constexpr = 0.9999934149894527,
     flags = None,
-    block_bias = None,
     sigmoid_a: float = 1.0,
     alpha_xpos_xi: float = 0.97,
     beta_xpos_xi: float = 0.8,
-    decay_mask = None,
-    sink_width: int = 4,
-    window_width: int = 16,
-    multi_factor: Optional[float] = None,
-    entropy_factor: Optional[float] = None,
-    **kwargs
+    frame_tokens: int = 2040,
+    text_false_length: tl.constexpr = 247,
+    sink_width: tl.constexpr = 4,
+    window_width: tl.constexpr = 16,
+    block_bias: Optional[torch.Tensor] = None,
+    decay_mask: Optional[torch.Tensor] = None,
+    repeat_mask_in_sink: bool = False,
+    top_p_mask: Optional[torch.Tensor] = None,
+    entropy_factor: tl.constexpr = 1.0,
+    multi_factor: tl.constexpr = 1.0,
+    mask_factor: tl.constexpr = 1.0,
+    latents: tl.constexpr = 99,
 ) -> torch.Tensor:
     """
 
@@ -121,14 +126,17 @@ def sage_attention(
     if is_causal:
         raise NotImplementedError
     else:
-        o = attn_false(q_int8, k_int8, v, flags, block_bias, decay_mask, q_scale, k_scale, 
-            tensor_layout=tensor_layout, output_dtype=dtype, xpos_xi=xpos_xi, sigmoid_a=sigmoid_a, 
-            alpha_xpos_xi=alpha_xpos_xi, beta_xpos_xi=beta_xpos_xi,
-            BLOCK_M=128, BLOCK_N=128,
-            sink_width=sink_width,
-            window_width=window_width,
-            multi_factor=multi_factor,
-            entropy_factor=entropy_factor,
-        )
+        o = attn_false(q_int8, k_int8, v, flags, block_bias, decay_mask, top_p_mask,
+                       q_scale, k_scale, tensor_layout=tensor_layout, output_dtype=dtype, 
+                       xpos_xi=xpos_xi, sigmoid_a=sigmoid_a, 
+                       alpha_xpos_xi=alpha_xpos_xi, beta_xpos_xi=beta_xpos_xi, 
+                       text_false_length=text_false_length, frame_tokens=frame_tokens,
+                       BLOCK_M=128, BLOCK_N=128,
+                       sink_width=sink_width, window_width=window_width,repeat_mask_in_sink=repeat_mask_in_sink,
+                       entropy_factor=entropy_factor,
+                       multi_factor=multi_factor,
+                       mask_factor=mask_factor,
+                       latents=latents,
+                    )
 
     return o
