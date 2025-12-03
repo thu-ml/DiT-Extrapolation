@@ -1,5 +1,27 @@
+## Diffusion-Transformer Extrapolation for Long Video Generation
+This repository provides the official implementation of [RIFLEx](https://arxiv.org/abs/2502.15894) and [UltraViCo](https://arxiv.org/abs/2511.20123), which achieve diffusion-transformer extrapolation for long video generation in a plug-and-play way.
+
 <div align="center">
 <img src='assets/riflex.png'></img>
+
+<a href='https://arxiv.org/pdf/2502.15894'><img src='https://img.shields.io/badge/arXiv-2502.15894-b31b1b.svg'></a>
+<a href='https://arxiv.org/pdf/2511.20123'><img src='https://img.shields.io/badge/arXiv-2511.20123-b31b1b.svg'></a> 
+</div>
+
+This repository hosts RIFLEx and UltraViCo on separate branches, and the code is fully open source.
+
+- RIFLEx: 
+    - [main](https://github.com/thu-ml/DiT-Extrapolation): HunyuanVideo-diffusers and CogVideoX-diffusers
+    - [multi-gpu](https://github.com/thu-ml/DiT-Extrapolation/tree/multi-gpu): multi-GPU inference for HunyuanVideo
+
+- UltraViCo:
+    - [ultra-wan](https://github.com/thu-ml/DiT-Extrapolation/tree/ultra-wan): UltraViCo for **Wan2.1**
+    - [ultra-hunyuan](https://github.com/thu-ml/DiT-Extrapolation/tree/ultra-hunyuan):UltraViCo for **HunyuanVideo**
+
+---
+## RIFLEx: A Free Lunch for Length Extrapolation in Video Diffusion Transformers
+<div align="center">
+
  <a href='https://arxiv.org/pdf/2502.15894'><img src='https://img.shields.io/badge/arXiv-2502.15894-b31b1b.svg'></a> &nbsp;
  <a href='https://riflex-video.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp;
 <a href='https://www.youtube.com/watch?v=taofoXDsKGk'><img src='https://img.shields.io/badge/Youtube-Video-b31b1b.svg'></a><br>
