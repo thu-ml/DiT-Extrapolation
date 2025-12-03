@@ -5,7 +5,7 @@ This repository provides the official implementation of [RIFLEx](https://arxiv.o
 <img src='assets/riflex.png'></img>
 
 <a href='https://arxiv.org/pdf/2502.15894'><img src='https://img.shields.io/badge/arXiv-2502.15894-b31b1b.svg'></a>
-<a href='https://arxiv.org/pdf/2511.201234'><img src='https://img.shields.io/badge/arXiv-2511.201234-b31b1b.svg'></a> 
+<a href='https://arxiv.org/pdf/2511.20123'><img src='https://img.shields.io/badge/arXiv-2511.20123-b31b1b.svg'></a> 
 </div>
 
 This repository hosts RIFLEx and UltraViCo on separate branches, and the code is fully open source.
