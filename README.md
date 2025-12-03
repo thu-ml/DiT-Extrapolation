@@ -11,12 +11,12 @@ This repository provides the official implementation of [RIFLEx](https://arxiv.o
 This repository hosts RIFLEx and UltraViCo on separate branches, and the code is fully open source.
 
 - RIFLEx: 
-    - `main`: HunyuanVideo-diffusers and CogVideoX-diffusers
-    - `multi-gpu`: multi-GPU inference for HunyuanVideo
+    - [main](https://github.com/thu-ml/DiT-Extrapolation): HunyuanVideo-diffusers and CogVideoX-diffusers
+    - [multi-gpu](https://github.com/thu-ml/DiT-Extrapolation/tree/multi-gpu): multi-GPU inference for HunyuanVideo
 
 - UltraViCo:
-    - `ultra-wan`: UltraViCo for **Wan2.1**
-    - `ultra-hunyuan`:UltraViCo for **HunyuanVideo**
+    - [ultra-wan](https://github.com/thu-ml/DiT-Extrapolation/tree/ultra-wan): UltraViCo for **Wan2.1**
+    - [ultra-hunyuan](https://github.com/thu-ml/DiT-Extrapolation/tree/ultra-hunyuan):UltraViCo for **HunyuanVideo**
 
 ---
 <div align="center">
