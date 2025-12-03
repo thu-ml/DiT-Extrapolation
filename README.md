@@ -5,7 +5,7 @@ This repository provides the official implementation of [RIFLEx](https://arxiv.o
 <img src='assets/riflex.png'></img>
 
 <a href='https://arxiv.org/pdf/2502.15894'><img src='https://img.shields.io/badge/arXiv-2502.15894-b31b1b.svg'></a>
-<a href='https://arxiv.org/pdf/2511.201234'><img src='https://img.shields.io/badge/arXiv-2502.15894-b31b1b.svg'></a> 
+<a href='https://arxiv.org/pdf/2511.201234'><img src='https://img.shields.io/badge/arXiv-2511.201234-b31b1b.svg'></a> 
 </div>
 
 This repository hosts RIFLEx and UltraViCo on separate branches, and the code is fully open source.
@@ -15,8 +15,8 @@ This repository hosts RIFLEx and UltraViCo on separate branches, and the code is
     - `multi-gpu`: multi-GPU inference for HunyuanVideo
 
 - UltraViCo:
-    - `ultra-wan`: UltraViCo for Wan2.1
-    - `ultra-hunyuan`:UltraViCo for HunyuanVideo
+    - `ultra-wan`: UltraViCo for **Wan2.1**
+    - `ultra-hunyuan`:UltraViCo for **HunyuanVideo**
 
 ---
 <div align="center">
@@ -52,7 +52,6 @@ Here, we list the SOTA video diffusion transformers that RIFLEx has been applied
 |---------------------------------------------------------|---------------|--------------------------------------------------------------|  
 | [HunyuanVideo](https://github.com/Tencent/HunyuanVideo) | 5s -> 11s     | <img src=assets/example/hun-free-RIFLEx.gif width="250">     | 
 | [CogVideoX-5B](https://github.com/THUDM/CogVideo)       | 6s -> 12s     | <img src=assets/example/cog-finetune-RIFLEx.gif width="250"> |
-| [Wan2.1](https://github.com/Wan-Video/Wan2.1)             | 5s -> 8s     | <img src=assets/example/wan-free.gif width="250">            |
 
 To be continued…… 
 
@@ -159,6 +158,13 @@ If you find the code useful, please cite
   title={Riflex: A free lunch for length extrapolation in video diffusion transformers},
   author={Zhao, Min and He, Guande and Chen, Yixiao and Zhu, Hongzhou and Li, Chongxuan and Zhu, Jun},
   journal={arXiv preprint arXiv:2502.15894},
+  year={2025}
+}
+
+@article{zhao2025ultravico,
+  title={UltraViCo: Breaking Extrapolation Limits in Video Diffusion Transformers},
+  author={Zhao, Min and Zhu, Hongzhou and Wang, Yingze and Yan, Bokai and Zhang, Jintao and He, Guande and Yang, Ling and Li, Chongxuan and Zhu, Jun},
+  journal={arXiv preprint arXiv:2511.20123},
   year={2025}
 }
 ```
