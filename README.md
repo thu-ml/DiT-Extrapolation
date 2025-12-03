@@ -21,26 +21,72 @@ This repository hosts RIFLEx and UltraViCo on separate branches, and the code is
 ---
 <div align="center">
 
-## RIFLEx: A Free Lunch for Length Extrapolation in Video Diffusion Transformers
-<a href="https://huggingface.co/papers/2502.15894"><img src="https://img.shields.io/static/v1?label=Daily papers&message=HuggingFace&color=yellow"></a>
-<a href='https://riflex-video.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp; 
-<a href='https://arxiv.org/pdf/2502.15894'><img src='https://img.shields.io/badge/arXiv-2502.15894-b31b1b.svg'></a> &nbsp;
-<a href='https://www.youtube.com/watch?v=taofoXDsKGk'><img src='https://img.shields.io/badge/Youtube-Video-b31b1b.svg'></a><br>
-<div>
-    <a href="https://gracezhao1997.github.io/" target="_blank">Min Zhao</a><sup></sup> | 
-    <a href="https://guandehe.github.io/" target="_blank">Guande He</a><sup></sup> | 
-    <a href="https://github.com/Chyxx" target="_blank">Yixiao Chen</a><sup></sup> | 
-    <a href="https://zhuhz22.github.io/" target="_blank">Hongzhou Zhu</a><sup></sup>|
-<a href="https://zhenxuan00.github.io/" target="_blank">Chongxuan Li</a><sup></sup> | 
-    <a href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml" target="_blank">Jun Zhu</a><sup></sup>
-</div>
-<div>
-    <sup></sup>Tsinghua University
+## UltraViCo: Breaking Extrapolation Limits in Video Diffusion Transformers
+<a href="https://huggingface.co/papers/2511.20123"><img src="https://img.shields.io/static/v1?label=Daily papers&message=HuggingFace&color=yellow"></a>
+<a href='https://thu-ml.github.io/UltraViCo.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp; 
+<a href='https://arxiv.org/abs/2511.20123'><img src='https://img.shields.io/badge/arXiv-2502.15894-b31b1b.svg'></a> <br>
+<div class="is-size-6 publication-authors">
+              <span class="author-block">
+                <a href="https://gracezhao1997.github.io/">Min Zhao*</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://zhuhz22.github.io/">Hongzhou Zhu*</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://voyagerthu.github.io/minimal-light/">Yingze Wang</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://github.com/KasenYoung">Bokai Yan</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://gracezhao1997.github.io/">Jintao Zhang</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://guandehe.github.io/">Guande He</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://zhenxuan00.github.io/">Ling Yang</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://zhenxuan00.github.io/">Chongxuan Li</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml">Jun Zhu</a>
+              </span>
+            </div>
 </div>
 
+This branch supports UltraViCo for Wan 2.1. For HunyuanVideo, please refer to the `ultra-hunyuan` branch.
 
-</div>
+### Installation
 
+```bash
+conda create -n ultravico_wan python=3.11 -y
+conda activate ultravico_wan
+pip install -r requirements.txt
+```
+
+### Inference
+
+```bash
+python inference.py --alpha 0.9 \
+  --extrapolation_ratio 3 \
+  --num_inference_steps 50 \
+  --prompt "Bald eagle soaring above river, telephoto shot freezing wings in motion, sparkling water surface reflecting sunlight."
+```
+
+- `extrapolation_ratio` $ \in (1,4]$: the generated video length as a multiple of the training length
+
+- `alpha` $ \in (0,1)$: larger $\alpha$ → stronger temporal consistency; smaller $\alpha$ → better visual quality.
+
+
+### Acknowledge
+
+- We adopt [SageAttention](https://github.com/thu-ml/SageAttention) for our UltraViCo attention kernel.
+
+- The code of the parallel diffusers-style HunyuanVideo is build upon [ParaAttention](https://github.com/chengzeyi/ParaAttention). Many tanks to its developers!
+
+- Thank [Tecent HuyuanVideo](https://github.com/Tencent-Hunyuan/HunyuanVideo) and [Wan2.1](https://github.com/Wan-Video/Wan2.1) for their great open-source models!
 
 ---
 
