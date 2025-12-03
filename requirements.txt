@@ -1,5 +1,5 @@
 torch==2.8.0
-diffusers==0.34.0
+diffusers==0.32.2
 imageio
 imageio-ffmpeg
 einops
