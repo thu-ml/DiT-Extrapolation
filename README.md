@@ -1,4 +1,4 @@
-## Diffusion-transformer Extrapolation for Long Video Generation
+## Diffusion-Transformer Extrapolation for Long Video Generation
 This repository provides the official implementation of [RIFLEx](https://arxiv.org/abs/2502.15894) and [UltraViCo](https://arxiv.org/abs/2511.20123), which achieve diffusion-transformer extrapolation for long video generation in a plug-and-play way.
 
 <div align="center">
