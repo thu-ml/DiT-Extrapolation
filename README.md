@@ -55,29 +55,34 @@ This repository hosts RIFLEx and UltraViCo on separate branches, and the code is
             </div>
 </div>
 <br>
-This branch supports UltraViCo for Wan 2.1. For HunyuanVideo, please refer to the `ultra-hunyuan` branch.
+This branch supports UltraViCo for HunyuanVideo. For Wan 2.1, please refer to the `ultra-wan` branch.
 
 ### Installation
 
 ```bash
-conda create -n ultravico_wan python=3.11 -y
-conda activate ultravico_wan
+conda create -n ultravico_hy python=3.11 -y
+conda activate ultravico_hy
 pip install -r requirements.txt
 ```
 
 ### Inference
 
 ```bash
-python inference.py --alpha 0.9 \
+export PYTHONPATH=$(pwd)/src
+
+torchrun --nproc_per_node=8 --standalone -m parallel_examples.run_attention_patterns \
+  --alpha 0.9 \
+  --beta 0.6 \
   --extrapolation_ratio 3 \
+  --height 544 \
+  --width 960 \
   --num_inference_steps 50 \
-  --prompt "Bald eagle soaring above river, telephoto shot freezing wings in motion, sparkling water surface reflecting sunlight."
+  --prompt "Brown bear wading slowly through shallow river, splashes frozen mid-air, forest reflection steady on water surface."
 ```
 
-- `extrapolation_ratio` $ \in (1,4]$: the generated video length as a multiple of the training length
+- `extrapolation_ratio` $\in (1,4]$ : the generated video length as a multiple of the training length
 
-- `alpha` $ \in (0,1)$: larger $\alpha$ → stronger temporal consistency; smaller $\alpha$ → better visual quality.
-
+- `alpha` < `beta` $\in (0,1)$: larger → stronger temporal consistency; smaller → better visual quality.
 
 ### Acknowledge
 
