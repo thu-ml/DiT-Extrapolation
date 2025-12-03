@@ -75,9 +75,9 @@ python inference.py --alpha 0.9 \
   --prompt "Bald eagle soaring above river, telephoto shot freezing wings in motion, sparkling water surface reflecting sunlight."
 ```
 
-- `extrapolation_ratio` $ \in (1,4]$: the generated video length as a multiple of the training length
+- `extrapolation_ratio` $\in (1,4]$: the generated video length as a multiple of the training length
 
-- `alpha` $ \in (0,1)$: larger $\alpha$ → stronger temporal consistency; smaller $\alpha$ → better visual quality.
+- `alpha` $\in (0,1)$: larger → stronger temporal consistency; smaller → better visual quality.
 
 
 ### Acknowledge
