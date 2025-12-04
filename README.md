@@ -1,5 +1,5 @@
 ## Diffusion-Transformer Extrapolation for Long Video Generation
-This repository provides the official implementation of [RIFLEx](https://arxiv.org/abs/2502.15894) and [UltraViCo](https://arxiv.org/abs/2511.20123), which achieve diffusion-transformer extrapolation for long video generation in a plug-and-play way.
+This repository provides the official implementation of [RIFLEx](https://arxiv.org/abs/2502.15894) , [UltraViCo](https://arxiv.org/abs/2511.20123) and UltraImage (code coming soon), which achieve diffusion-transformer extrapolation for long video generation in a plug-and-play way.
 
 <div align="center">
 <img src='assets/riflex.png'></img>
@@ -17,6 +17,10 @@ This repository hosts RIFLEx and UltraViCo on separate branches, and the code is
 - UltraViCo:
     - [ultra-wan](https://github.com/thu-ml/DiT-Extrapolation/tree/ultra-wan): UltraViCo for **Wan2.1**
     - [ultra-hunyuan](https://github.com/thu-ml/DiT-Extrapolation/tree/ultra-hunyuan):UltraViCo for **HunyuanVideo**
+
+- UltraImage:
+    - Qwen-image (to do).
+    - Flux (to do).
 
 ---
 <div align="center">
