@@ -170,4 +170,10 @@ If you find the code useful, please cite
   journal={arXiv preprint arXiv:2511.20123},
   year={2025}
 }
+@article{zhao2025ultraimage,
+  title={UltraImage: Rethinking Resolution Extrapolation in Image Diffusion Transformers},
+  author={Zhao, Min and Yan, Bokai and Yang, Xue and Zhu, Hongzhou and Zhang, Jintao and Liu, Shilong and Li, Chongxuan and Zhu, Jun},
+  journal={arXiv preprint arXiv:2512.04504},
+  year={2025}
+}
 ```
