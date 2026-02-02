@@ -1,5 +1,5 @@
 ## Diffusion-Transformer Extrapolation for Long Video Generation
-This repository provides the official implementation of [RIFLEx](https://arxiv.org/abs/2502.15894) **(ICML 2025)**, [UltraViCo](https://arxiv.org/abs/2511.20123) **(ICLR 2026)**, which achieve diffusion-transformer extrapolation for long video generation in a plug-and-play way.
+This repository provides the official implementation of [RIFLEx](https://arxiv.org/abs/2502.15894) **(ICML 2025)**, [UltraViCo](https://arxiv.org/abs/2511.20123) **(ICLR 2026)** and [UltraImage](https://arxiv.org/abs/2512.04504) , which achieve diffusion-transformer extrapolation for long video generation and high resolution image generation in a plug-and-play way.
 
 <div align="center">
 <img src='assets/riflex.png'></img>
@@ -59,6 +59,7 @@ Here, we list the SOTA video diffusion transformers that RIFLEx has been applied
 To be continued…… 
 
 ## 🔥🔥 News
+- **2026.1.26** : UltraViCo is accepted by ICLR 2026!
 - **2025.5.1** : RIFLEx is accepted by ICML 2025!
 - **2025.3.17** : RIFLEx is integrated to the official [HunyuanVideo-I2V](https://github.com/Tencent/HunyuanVideo-I2V) repository!
 - **2025.3.1** : The code for [CogVideoX-5B](https://github.com/THUDM/CogVideo) and fine-tuned [CogVideoX-RIFLEx](https://huggingface.co/thu-ml/CogVideoX-RIFLEx-diffusers/tree/main) are released.
