@@ -38,13 +38,13 @@ This repository hosts RIFLEx and UltraViCo on separate branches, and the code is
                 <a href="https://github.com/KasenYoung">Bokai Yan</a>,
               </span>
               <span class="author-block">
-                <a href="https://gracezhao1997.github.io/">Jintao Zhang</a>,
+                <a href="https://jt-zhang.github.io/">Jintao Zhang</a>,
               </span>
               <span class="author-block">
                 <a href="https://guandehe.github.io/">Guande He</a>,
               </span>
               <span class="author-block">
-                <a href="https://zhenxuan00.github.io/">Ling Yang</a>,
+                <a href="https://yangling0818.github.io/">Ling Yang</a>,
               </span>
               <span class="author-block">
                 <a href="https://zhenxuan00.github.io/">Chongxuan Li</a>,
