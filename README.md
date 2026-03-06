@@ -19,8 +19,8 @@ This repository hosts RIFLEx and UltraViCo on separate branches, and the code is
     - [ultra-hunyuan](https://github.com/thu-ml/DiT-Extrapolation/tree/ultra-hunyuan):UltraViCo for **HunyuanVideo**
 
 - UltraImage:
-    - Qwen-image (to do).
-    - Flux (to do).
+    - [ultra-flux](https://github.com/thu-ml/DiT-Extrapolation/tree/ultra-flux): UltraImage for Flux
+    - [ultra-qwenimage](https://github.com/thu-ml/DiT-Extrapolation/tree/ultra-qwenimage): UltraImage for Qwen-Image
 
 ---
 <div align="center">
