@@ -1,0 +1,33 @@
+base:
+  guidance_scale: 4.0
+  height: 4096
+  model_path: / # your Qwen-Image model path
+  output_dir: /   # your path for outputs
+  prompts_file: /  # your prompt path
+  seed: 42
+  width: 4096
+method:
+  attention_operator:
+    attn_func: attention_decay
+    save_one_timestep: true
+    use_decay_mask: true
+    decay_type: continuous
+    h_min: 0.04
+    h_max: 6.25
+    lambda_max: 1.3
+    lambda_min: 1.0
+    func_type: power
+    gamma: 2.0
+  hyper_parameters_height:
+    freq_id:
+    - 8
+    - 9
+    linear_factor: 1.0
+  hyper_parameters_width:
+    freq_id:
+    - 8
+    - 9
+    linear_factor: 1.0
+  name_height: multi_inter
+  name_width: multi_inter
+  save_dir: / # your path for block avg
