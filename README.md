@@ -22,7 +22,7 @@
                 <a href="https://scholar.google.com/citations?user=J3NTnmEAAAAJ&hl=zh-CN&oi=sra">Jintao Zhang</a>,
               </span>
               <span class="author-block">
-                <a >Shilong Liu</a>,
+                <a href="https://lsl.zone/">Shilong Liu</a>,
               </span>
               <span class="author-block">
                 <a href="https://zhenxuan00.github.io/">Chongxuan Li</a>,
