@@ -4,7 +4,7 @@
 
 ## UltraImage: Rethinking Resolution Extrapolation in Image Diffusion Transformers
 <a href='https://thu-ml.github.io/ultraimage.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp; 
-<a href='https://arxiv.org/pdf/2512.04504'><img src='https://img.shields.io/badge/arXiv-22511.20123-b31b1b.svg'></a> <br>
+<a href='https://arxiv.org/pdf/2512.04504'><img src='https://img.shields.io/badge/arXiv-2512.04504-b31b1b.svg'></a> <br>
 <div class="is-size-6 publication-authors">
               <span class="author-block">
                 <a href="https://gracezhao1997.github.io/">Min Zhao</a>,
