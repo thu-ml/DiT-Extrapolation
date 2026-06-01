@@ -518,6 +518,18 @@ class FluxPipeline(DiffusionPipeline, FluxLoraLoaderMixin):
 
         return latents
 
+    @staticmethod
+    def _unpack_latents_hz(latents, height, width, vae_scale_factor):
+        batch_size, num_patches, channels = latents.shape
+        height = height // vae_scale_factor
+        width = width // vae_scale_factor
+        # TODO: hz modified here, currently hard-coded. 
+        latents = latents.view(batch_size, 64, 64, channels // 4, 2, 2) # [1, xx, xx, 16,2,2]
+        latents = latents.permute(0, 3, 1, 4, 2, 5)
+        # TODO: hz modified here, currently hard-coded. 
+        latents = latents.reshape(batch_size, channels // (2 * 2), 64 * 2, 64 * 2)
+
+        return latents
     def prepare_latents(
         self,
         batch_size,
@@ -763,7 +775,9 @@ class FluxPipeline(DiffusionPipeline, FluxLoraLoaderMixin):
 
         # 6.3 Upsampling ###########################################################################
         if guidance_schedule == "super_imax":
-            latents = self._unpack_latents(latents, height // int(scale_factor + 0.5), width // int(scale_factor + 0.5), self.vae_scale_factor)
+            # print(f'latent.shape is {latents.shape}')
+            # print(f'Begin: height is {height}, width is {width}')
+            latents = self._unpack_latents_hz(latents, height // int(scale_factor + 0.5), width // int(scale_factor + 0.5), self.vae_scale_factor)
             latents = (latents / self.vae.config.scaling_factor) + self.vae.config.shift_factor
             image_guidance = self.vae.tiled_decode(latents, return_dict=False)[0]
             image_guidance = torch.nn.functional.interpolate(image_guidance, size=(height, width), mode='bicubic')
@@ -890,6 +904,7 @@ class FluxPipeline(DiffusionPipeline, FluxLoraLoaderMixin):
                     text_duplication=text_duplication,
                     method=method,
                 )[0]
+                
                 if guidance_schedule == "outpaint_imax":
                     latents_unpack = self._unpack_latents(latents, height, width, self.vae_scale_factor)
                     latents_guidance_unpack = self._unpack_latents(latents_guidance, native_resolution, native_resolution, self.vae_scale_factor)

@@ -134,9 +134,9 @@ if __name__ == "__main__":
         )
         safe_prompt = "".join(c for c in prompt_low[:20] if c.isalnum() or c in (' ', '-', '_')).rstrip()
         safe_prompt = safe_prompt.replace(' ', '_')
-        filename = f"./{image_dir}/{i+1:03d}_{safe_prompt}.png"
+        filename = f"{image_dir}/{i+1:03d}_{safe_prompt}.png"
         images[0].save(filename)
-        guidance_filename = f"./{guidance_dir}/{i+1:03d}_{safe_prompt}.png"
+        guidance_filename = f"{guidance_dir}/{i+1:03d}_{safe_prompt}.png"
         images[1].save(guidance_filename)
         print(f"Saved: {filename}")
         print(f"Saved: {guidance_filename}")

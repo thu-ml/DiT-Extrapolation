@@ -1985,7 +1985,7 @@ class FluxAttnProcessor2_0:
             # key = apply_rotary_emb(key, image_rotary_emb)
             query, key = apply_rope(query, key, image_rotary_emb)
 
-        train_seq_len = 64 ** 2 + 512
+        train_seq_len = 128 ** 2 + 512
         if proportional_attention:
             attention_scale = math.sqrt(math.log(key.size(2), train_seq_len) / head_dim)
             # attention_scale = (math.sqrt( math.log(query.size(2))/math.log(128**2)))/math.sqrt(head_dim)
